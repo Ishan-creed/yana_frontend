@@ -44,7 +44,7 @@ export const ChatContextProvider = ({ children, user }) => {
 
 
     useEffect(() => {
-        const newSocket = io("http://localhost:3005");
+        const newSocket = io("https://yana-socket.onrender.com");
         setSocket(newSocket);
 
         return () => {
