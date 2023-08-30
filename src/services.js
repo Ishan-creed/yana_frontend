@@ -1,6 +1,6 @@
 import { async } from "react-input-emoji";
 
-export const baseUrl = "http://localhost:5000/api";
+export const baseUrl = "https://yana-backend-s7xq.onrender.com/api";
 
 export const postRequest = async (url, body) => {
 
