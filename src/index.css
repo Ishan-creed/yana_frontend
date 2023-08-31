@@ -12,8 +12,19 @@ code {
 .all-users {
   display: flex;
   margin-bottom: 1rem;
+
+
+  @media (max-width: 594px) {
+    flex-direction: column;
+    width:fit-content;
+    margin-top:"50px";
+  }
+
+  
 }
- 
+
+
+  
 .single-user{
   background: rgb(0, 0, 0);
   color: white;
@@ -22,6 +33,7 @@ code {
   border-radius: 18px;
   margin-right: 0.5rem;
   position: relative;
+  margin-top: 10px;
 }
 
 .loader {
@@ -48,8 +60,14 @@ code {
   background-color: #000000;
   position: relative;
   border-radius: 10px;
-  width: 380px;
+  width: 383px;
   padding: 5px;
+
+  @media (max-width: 594px) {
+    
+    width: 90vw;
+  }
+
 }
 
 .user-card .text-content{
@@ -137,9 +155,11 @@ code {
 }
 
 .chat-input{
+
   width: 100%;
   background: rgb(171, 171, 171);
   padding: 1rem;
+  z-index: 5;
 }
 
 .send-btn{

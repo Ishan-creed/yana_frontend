@@ -12,19 +12,27 @@ const NavBar = () => {
     const { user, logOutUser, updateThought, thought, updateUser } = useContext(AuthContext);
     const [title, setTitle] = useState("");
     const [welcome, setWelcome] = useState("");
+    const [logOutbutton, setLogoutButton] = useState({
+
+        color: "white",
+        background: "black",
+        borderRadius: "10px",
+        padding: "5px"
+    })
+
     const [buttonStyle, setButonStyle] = useState({
-        background:"black",
-        color:"white",
-        padding:"5px",
-        borderRadius:"5px",
-        marginLeft:"5px"
+        background: "black",
+        color: "white",
+        padding: "5px",
+        borderRadius: "5px",
+        marginLeft: "5px"
     });
     const [selectStyle, setSelectStyle] = useState({
-        background:"black",
-        color:"white",
-        padding:"5px",
-        borderRadius:"5px",
-        marginLeft:"5px"
+        background: "black",
+        color: "white",
+        padding: "5px",
+        borderRadius: "5px",
+        marginLeft: "5px"
     });
 
     const smallButtonStyle = {
@@ -45,6 +53,8 @@ const NavBar = () => {
 
     }
 
+ 
+
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth < 900) {
@@ -53,24 +63,29 @@ const NavBar = () => {
                 setWelcome("");
                 setSelectStyle(smallSelectStyle);
                 setButonStyle(smallButtonStyle);
+                setLogoutButton(smallButtonStyle);
 
             } else {
 
                 setTitle("YANA");
                 setWelcome("Logged in as ");
                 setSelectStyle({
-                    background:"black",
-                    color:"white",
-                    padding:"5px",
-                    borderRadius:"5px",
-                    marginLeft:"5px"
+                    background: "black",
+                    color: "white",
+                    padding: "5px",
+                    borderRadius: "5px",
+                    marginLeft: "5px"
                 });
-                setButonStyle({    
-                background:"black",
-                color:"white",
-                padding:"5px",
-                borderRadius:"5px",
-                marginLeft:"5px"});
+                setButonStyle({
+                    background: "black",
+                    color: "white",
+                    padding: "5px",
+                    borderRadius: "5px",
+                    marginLeft: "5px"
+                });
+                setLogoutButton({
+                    color: "white", background: "black", borderRadius: "10px", padding: "5px"
+                })
             }
         };
 
@@ -88,7 +103,7 @@ const NavBar = () => {
 
     return (
         <>
-        <p style={{ textAlign: "center", color: "white", marginTop: "20px" }}>Made with ❤️ and care by Ishan Verma 🙂 ~ <b>YANA</b></p>
+            <p style={{ textAlign: "center", color: "white", marginTop: "20px" }}>Made with ❤️ and care by Ishan Verma 🙂 ~ <b>YANA</b></p>
             <Navbar bg='light' className='mb-4' style={{ height: "3.75rem", color: "black", marginLeft: "20px", marginRight: "20px", borderRadius: "15px" }}>
                 <Container >
 
@@ -133,7 +148,7 @@ const NavBar = () => {
                                 </Link></>)}
 
                             {user ?
-                                <button style={{ color: "white", background: "black", borderRadius: "10px", padding: "5px" }} onClick={logOutUser}>Logout</button> :
+                                <button style={logOutbutton} onClick={logOutUser}>Logout</button> :
                                 ''
                             }
                         </Stack>
