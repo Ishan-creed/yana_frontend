@@ -100,7 +100,7 @@ export const ChatContextProvider = ({ children, user }) => {
 
          socket.on("getNotification",(res)=>{
             
-            const isChatopen = currentChat.members.some(id => id === res.senderId);
+            const isChatopen =  currentChat?.members.some(id => id === res.senderId);
 
             if(isChatopen){
                 setNotification(prev => [{...res,isRead:true},...prev])
@@ -117,7 +117,7 @@ export const ChatContextProvider = ({ children, user }) => {
             socket.off("getNotification");
          }
 
-    }, [socket,currentChat]);
+    }, [socket,currentChat,notification]);
 
 
     useEffect(() => {
