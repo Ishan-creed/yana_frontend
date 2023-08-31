@@ -15,10 +15,6 @@ const ChatBox = () => {
     const [textMessage, setTextMessage] = useState("");
     const scroll = useRef()
 
-    const handleClick= async () => {
-        await sendTextMessage(textMessage, user, currentChat._id, setTextMessage);
-        setTextMessage(""); // Reset the input text after sending
-      };
 
     useEffect(()=>{
 
@@ -55,7 +51,7 @@ const ChatBox = () => {
         <Stack direction="horizontal" gap={3} className="chat-input flex-grow-0">
             <InputEmoji setValue={textMessage} onChange={setTextMessage} fontFamily="nunito" borderColor="rgba(72,112,223,0.2)" />
             <button className="send-btn" onClick={()=>sendTextMessage(textMessage,user,currentChat._id ,setTextMessage)}>
-            <img style={{color:"white",height:"30px"}} src={icon} onClick={handleClick}></img>
+            <img style={{color:"white",height:"30px"}} src={icon}></img>
 
             </button>
         </Stack>
