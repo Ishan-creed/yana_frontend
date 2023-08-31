@@ -80,7 +80,7 @@ const Auth_signup = () => {
       <h3>Purpose of the Application:</h3>
       <p>The application aims to provide a platform where individuals can instantly connect with others who share their current thoughts. By offering real-time matches and chats, the app encourages meaningful interactions among like-minded people. It's a space to share ideas, engage in discussions, and foster connections based on shared thoughts, creating a unique and engaging social experience.</p>
     </div>
-    <div className='auth__form-container_fields-content_button' style={{marginLeft:"31vw"}}>
+    <div className='auth__form-container_fields-content_button'>
     <button onClick={close}>Continue</button>
     </div>
   </div>
