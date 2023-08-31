@@ -46,7 +46,7 @@ const Auth_login = () => {
                             Don't have an account?
                             
                             <span>
-                                {isAuthLoading?'Processing...': ''}
+                                {isAuthLoading?( <div className='loader'></div> ): ''}
                                 <Link to='/authSignup' className="link-dark text-decoration-none" style={{textDecoration:"none",marginLeft:"5px"}}>
                                 Sign Up
                             </Link>
