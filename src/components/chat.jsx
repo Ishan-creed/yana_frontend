@@ -41,7 +41,7 @@ const Chat = () => {
   return (
     <Container style={{paddingBottom:"60px"}}>
    
-    <h6 style={{color:"white",marginBottom:"20px"}}>Matched Users with the same thought:</h6>
+    <h6 style={{color:"white",marginBottom:"20px"}}>Matched Users with the same thought: {user?.thought}</h6>
     <hr style={{color:"white"}}></hr>
     <PotentialChats/>
     <hr style={{color:"white"}}></hr>
