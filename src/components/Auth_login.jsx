@@ -20,7 +20,7 @@ const Auth_login = () => {
             <div className='auth__form-container_fields'>
             <div style={{textAlign:"center",display:"flex",justifyContent:"center"}}>
             <img style={{color:"white",height:"70px",marginLeft:"9px",marginBottom:"20px"}} src={icon}></img>
-            <h3 style={{marginLeft:"8px"}}>You are not alone</h3>
+            <h3 style={{marginLeft:"8px"}}>YOLO</h3>
             </div>
                 <div className='auth__form-container_fields-content'>
                     <p>Sign In</p>
