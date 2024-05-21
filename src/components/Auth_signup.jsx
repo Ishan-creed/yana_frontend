@@ -38,7 +38,7 @@ const Auth_signup = () => {
 <div className={`popup ${showPopup ? 'popup' : 'popup_no'}`} id="how-it-works">
   <div className="popup-content">
   
-    <h2 className="popup-title">Explore Like-Minded Connections with YANA</h2>
+    <h2 className="popup-title">Explore Like-Minded Connections with YOLO</h2>
     <div className="popup-purpose">
       <h3>Purpose:</h3>
       <p>Connect with like-minded thinkers in real time.</p>
@@ -90,7 +90,7 @@ const Auth_signup = () => {
             <div className='auth__form-container_fields'>
                 <div style={{ textAlign: "center", display: "flex", justifyContent: "center" }}>
                     <img style={{ color: "white", height: "70px", marginLeft: "9px", marginBottom: "20px" }} src={icon}></img>
-                    <h3 style={{ marginLeft: "8px" }}>You are not alone</h3>
+                    <h3 style={{ marginLeft: "8px" }}>YOLO</h3>
                 </div>
                 <div className='auth__form-container_fields-content'>
                     <p>Sign Up</p>
